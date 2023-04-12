@@ -3,10 +3,12 @@ version: "3.9"
 services:
   tests:
     build: .
-    # note Docker doesn't exec the command using a shell so let's use one explictly 
-    command: /bin/sh -c "cargo test -- -Z unstable-options --format json | tee results.txt"
+    command: /bin/sh -c "cargo test -- -Z unstable-options --format json | tee $ENGI_WORKING_DIR/results.txt"
     volumes:
-      # bind mount a directory to share the output of the test runner
-      - type: bind
-        source: .
-        target: /code
+      - type: volume
+        source: output
+        target: $ENGI_WORKING_DIR
+volumes:
+  output:
+    external: true
+    name: $ENGI_WORKING_VOL
