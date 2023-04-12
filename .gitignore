@@ -1,0 +1,10 @@
+.gitsecret/keys/random_seed
+!*.secret
+.env
+*.swp
+
+
+# Added by cargo
+
+/target
+test-data.json
