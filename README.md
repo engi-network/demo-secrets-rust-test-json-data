@@ -9,7 +9,7 @@ Skeleton project demonstrating the use of [git secrets](https://git-secret.io/) 
 ## Setup
 
 - Make sure to generate a gpg key, if you don't have one. See [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key) for instructions.
-- Fetch ENGI's public gpg key [here]()
+- Fetch ENGI's public gpg key [testnet](https://staging.engi.network/ssm/staging/config/gpg/public_key) [mainnet](https://engi.network/ssm/production/config/gpg/public_key)
 - Import ENGI key into your gpg keyring: `gpg --import engi_public_key.txt`
 - Initialize git secrets in your repo: `git secret init`
 - Add ENGI to the list of allowed decryptors: `git secret tell circleci@engi.network`
