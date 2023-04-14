@@ -3,7 +3,7 @@ version: "3.9"
 services:
   tests:
     build: .
-    command: cargo -h; echo "Dir is ${ENGI_WORKING_DIR}/results.txt"; cat ${ENGI_WORKING_DIR}/results.txt; cargo test -- -Z unstable-options --format json | tee $ENGI_WORKING_DIR/results.txt
+    command: cargo test -- -Z unstable-options --format json | tee $ENGI_WORKING_DIR/results.txt
     volumes:
       - type: volume
         source: output

@@ -16,6 +16,9 @@ pub struct TestData {
 }
 
 fn unpack_tests() -> TestData {
+    let dir = std::env::var("ENGI_WORKING_DIR").expect("No workdir!");
+    let vol = std::env::var("ENGI_WORKING_VOL").expect("No workvol!");
+    println!("TJDEBUG dir {} vol {}", dir, vol);
     let root = std::env::var("CARGO_MANIFEST_DIR").expect("No cargo manifest");
     let mut path = PathBuf::new();
 
