@@ -3,7 +3,7 @@ version: "3.9"
 services:
   tests:
     build: .
-    command: cargo test -- -Z unstable-options --format json | tee $ENGI_WORKING_DIR/results.txt
+    command: run_rust $ENGI_WORKING_DIR/results.txt
     volumes:
       - type: volume
         source: output
