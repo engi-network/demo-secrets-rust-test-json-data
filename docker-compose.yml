@@ -1,12 +1,10 @@
-Version: "3.9"
+version: "3.9"
 
 services:
   tests:
     build: .
     #command: /bin/sh -c "echo $ENGI_WORKING_DIR; cargo test -- -Z unstable-options --format json | tee $ENGI_WORKING_DIR/results.txt"
     command: /bin/sh -c "env"
-    environment:
-      ENGI_WORKING_DIR: ${ENGI_WORKING_DIR}
     volumes:
       - type: volume
         source: output
