@@ -3,7 +3,7 @@ version: "3.9"
 services:
   tests:
     build: .
-    command: run_rust $ENGI_WORKING_DIR/results.txt
+    command: wrapped_cargo $ENGI_WORKING_DIR/results.txt
     volumes:
       - type: volume
         source: output
